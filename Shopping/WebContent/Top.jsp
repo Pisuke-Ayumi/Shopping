@@ -20,8 +20,18 @@
  		<input type="submit" value="カート">
  	</form>
 
- 		<form class="logout" action="UsersDelete" method="post">
- 		<input type="submit" value="ユーザ削除">
+
+ 		<form action="UsersDelete" method="post">
+ 		<input type="submit" onClick="return clickdelete();"value="ユーザ削除">
+ 		<script>
+ 		function clickdelete(){
+ 		var delete1 = window.confirm("ユーザ情報を削除しますか？");
+ 			if(delete1){
+ 				return true;
+ 			}
+ 			return false;
+ 		}
+ 		</script>
  	</form>
 	<form class="logout" action="UserInfo" method="post">
  		<input type="submit" value="登録情報確認">

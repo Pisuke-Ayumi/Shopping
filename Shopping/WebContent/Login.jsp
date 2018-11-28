@@ -18,7 +18,7 @@
         </caption>
         <tr>
           <th>ユーザID</th>
-          <th><input type="text" name="id" size="30" maxlength="20"><br></th>
+          <th><input type="text" name="id" size="30" maxlength="20"placeholder="メールアドレスを入力してください"><br></th>
         </tr>
         <tr>
           <th>パスワード</th>
