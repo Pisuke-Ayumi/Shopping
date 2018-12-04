@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import dao.PasswordDAO;
 import dao.UsersDAO;
 
 /**
@@ -50,10 +51,21 @@ public class UsersUpdate extends HttpServlet {
 		String id=(String)session.getAttribute("id");     //ユーザID
 
 		UsersDAO usersdao=new UsersDAO();
+		PasswordDAO passworddao=new PasswordDAO();
+
+
+		System.out.println("たかのだいき");
+
 
 		//DBをアップデート
-		usersdao.updateUser(content, id, item);
-
+		if(item.equals("password")){
+			System.out.println("たばこ");
+			passworddao.updatePass(content,id);
+		}else{
+			System.out.println("test");
+			usersdao.updateUser(content, id, item);
+		}
+		System.out.println("あいうえお");
 		request.getRequestDispatcher("UserInfo").forward(request,response);
 	}
 

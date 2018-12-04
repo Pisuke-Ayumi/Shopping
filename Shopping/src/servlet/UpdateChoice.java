@@ -46,6 +46,7 @@ public class UpdateChoice extends HttpServlet {
 		String content=null;
 		int contentsu=0;
 
+
 		//セッション・Beanのインスタンス化
 		HttpSession session=request.getSession();
 		UsersBean userbean=new UsersBean();
@@ -61,6 +62,9 @@ public class UpdateChoice extends HttpServlet {
 		case "user_id":
 			content=userbean.getId(); break;
 
+		case"password":
+			break;
+
 		case "user_name":
 			content=userbean.getUsername(); break;
 
@@ -71,9 +75,11 @@ public class UpdateChoice extends HttpServlet {
 			content=userbean.getPost(); break;
 
 		case "phone_number":
-			content=userbean.getPhone();;break;
+			content=userbean.getPhone();break;
 
 		}
+
+		System.out.println(item);
 		//変更項目の選択済みの場合セット
 		if(content != null){
 			request.setAttribute("content", content);

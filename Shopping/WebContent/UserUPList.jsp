@@ -19,6 +19,9 @@
 			<td>${userbean.id}</td>
 		</tr>
 		<tr>
+			<th align="left"><input type="radio"name="item"value="password">パスワード</th>
+			
+		<tr>
 			<th align="left"><input type="radio" name="item" value="user_name">氏名</th>
 			<td>${userbean.username}</td>
 		</tr>

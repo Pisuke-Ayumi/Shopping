@@ -11,6 +11,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+<%@include file="header.jsp" %>
 	<form action="ProductListDP" method="post">
 		<input type=text name=key>
 		<input type=submit value="検索">

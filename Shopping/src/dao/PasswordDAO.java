@@ -76,14 +76,20 @@ public class PasswordDAO extends DaoBase{
 
 	//パスワード変更
 		public void updatePass(String pass,String id){
+
+			System.out.println(id);
+			Hash hash=new Hash();
+			String pass2=hash.encryptPass(pass);
+
+
 			try{
 				//connection確率
 				super.DbOpen();
 
 				//DBにユーザ情報を更新
-				String sql="update schedules_table set password= ? where user_id= ?";
+				String sql="update password set password= ? where user_id= ?";
 				stmt=con.prepareStatement(sql);
-				stmt.setString(1,pass);
+				stmt.setString(1,pass2);
 				stmt.setString(2,id);
 				stmt.executeUpdate();
 

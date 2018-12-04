@@ -7,6 +7,7 @@ import bean.UsersBean;
 public class UsersDAO extends DaoBase{
 	UsersBean userbean=new UsersBean();
 
+
 	//ユーザ登録情報の取得
 	public UsersBean getUser(String id){
 		UsersBean userbean;

@@ -11,6 +11,7 @@
 </head>
 <body>
 <h1>Top</h1>
+<%@include file="header.jsp" %>
 <%if(id != null){ %>
  	<form class="logout" action="Login" method="get">
  		<input type="submit" value="ログアウト">
@@ -30,7 +31,7 @@
  				return true;
  			}
  			return false;
- 		}
+ 		}request.getRequestDispatcher("Top.jsp").forward(request,response);
  		</script>
  	</form>
 	<form class="logout" action="UserInfo" method="post">
@@ -56,7 +57,6 @@
     <img src="${pageContext.request.contextPath}/img/img4.jpg" alt="画像4" width="100%">
   </p>
 </div>
-
 
 
 

@@ -28,6 +28,8 @@ public class Start extends HttpServlet {
 	 */
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+		request.getRequestDispatcher("Top.jsp").forward(request,response);
 	}
 
 	/**

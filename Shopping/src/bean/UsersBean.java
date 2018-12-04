@@ -4,7 +4,7 @@ public class UsersBean {
 	private String  id,username,address,post,phone,birthday,sex ;
 
 	public UsersBean() {
-		// TODO 自動生成されたコンストラクター・スタブ
+		// TODO 自動生成されたコンストラクター・スタブaaa
 	}
 
 	public UsersBean(String id,String username,String address,String post,String phone,String birthday,String sex){
@@ -25,7 +25,6 @@ public class UsersBean {
 	public void setId(String id) {
 		this.id = id;
 	}
-
 	public String getUsername() {
 		return username;
 	}
